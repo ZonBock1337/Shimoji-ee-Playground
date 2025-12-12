@@ -3,9 +3,9 @@
 ![GitHub issues](https://img.shields.io/github/issues/ZonBock1337/Shimoji-ee-Playground)
 ![GitHub license](https://img.shields.io/github/license/ZonBock1337/Shimoji-ee-Playground)
 
-**What is Shimoji Playground?**
+**What is Shimoji-ee Playground?**
 
-Shimoji Playground is an app that lets you make your Shimojis climb up a window (the standard Shimoji function).  
+Shimoji-ee Playground is an app that lets you make your Shimojis climb up a window (the standard Shimoji function).  
 **BUT:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view).  
 <br>
 You also can use your own Playground (Image) for Shimoji Playground just go in the editor and change it!
@@ -16,7 +16,7 @@ The format will be (.spb)
 ---
 
 # Requirements
-For **Shimoji Playground** you will need [Shimeji](https://kilkakon.com/shimeji/), you dont need it really but this App was made for [Shimeji](https://kilkakon.com/shimeji/).<br>
+For **Shimoji-ee Playground** you will need [Shimeji](https://kilkakon.com/shimeji/), you dont need it really but this App was made for [Shimeji](https://kilkakon.com/shimeji/).<br>
 Also you need **Java 11** for [Shimeji](https://kilkakon.com/shimeji/)
 
 # Linux Support
