@@ -8,7 +8,7 @@
 **What is Shimoji-ee Playground?**
 
 Shimoji-ee Playground is an app that lets you make your Shimeji's climb up a window (the standard Shimeji function).  
-**BUT:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view).  
+**BUT:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view). ([see here](https://github.com/ZonBock1337/Shimoji-ee-Playground/blob/master/README.md#previews))
 <br>
 You also can use your own Playground (Image) for Shimoji Playground just go in the editor and change it!
 
