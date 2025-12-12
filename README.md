@@ -19,6 +19,9 @@ The format will be (.spb)
 For **Shimoji Playground** you will need [Shimeji](https://kilkakon.com/shimeji/), you dont need it really but this App was made for [Shimeji](https://kilkakon.com/shimeji/).<br>
 Also you need **Java 11** for [Shimeji](https://kilkakon.com/shimeji/)
 
+# Linux Support
+Shimoji-ee Playground will **not** support linux, the reason for this is because [Shimeji](https://kilkakon.com/shimeji/) doesn't support linux (simple reason)
+
 ---
 
 # Previews
