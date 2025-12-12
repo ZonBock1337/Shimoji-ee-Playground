@@ -1,7 +1,7 @@
 # Shimoji-ee Playground
 ![GitHub Repo stars](https://img.shields.io/github/stars/ZonBock1337/Shimoji-ee-Playground?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/ZonBock1337/Shimoji-ee-Playground)
-![license](https://img.shields.io/badge/license-Shimojiee_Playground_license-red)
+![license](https://img.shields.io/badge/license-Shimojiee_Playground_License-red)
 
 **What is Shimoji-ee Playground?**
 
