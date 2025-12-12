@@ -49,7 +49,7 @@ namespace ShimejiPlaygroundApp
                 grid.Children.Add(bg);
             }
 
-            Button closeButton = new Button
+          /*  Button closeButton = new Button
             {
                 Content = "X",
                 Width = 30,
@@ -59,7 +59,7 @@ namespace ShimejiPlaygroundApp
                 Margin = new Thickness(5)
             };
             closeButton.Click += (s, e) => this.Close();
-            grid.Children.Add(closeButton);
+            grid.Children.Add(closeButton); */
 
             this.Content = grid;
 

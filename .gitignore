@@ -1,9 +1,0 @@
-.vs/
-*.user
-*.suo
-bin/
-obj/
-*.exe
-*.dll
-*.pdb
-*.config
