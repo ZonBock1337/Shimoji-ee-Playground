@@ -3,7 +3,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/ZonBock1337/Shimoji-ee-Playground)
 ![license](https://img.shields.io/badge/license-Shimojiee_Playground_License-red)
 
-<img width="1280" height="640" alt="Shimoji Playground" src="https://github.com/user-attachments/assets/c8d02cad-2735-4b0a-ad1e-c64abdb83d2a" />
+<img width="1280" height="640" alt="Shimoji Playground" src="https://github.com/user-attachments/assets/a3edf784-bd3d-46c7-8367-5145ce5539cf" />
 
 **What is Shimoji-ee Playground?**
 
