@@ -34,5 +34,12 @@ Shimoji-ee Playground will **not** support linux, the reason for this is because
 **Window throwing**<br>
 ![Shimoji Playground - Window throwing](https://github.com/user-attachments/assets/0e2583ac-fa2c-4476-96c0-60430ccdef9b)
 
+# Credits
+✦ neuro and evil by [@paccha_7](https://x.com/paccha_7?s=20)<br>
+✦ vedal by [@Monikaphobia](https://x.com/Monikaphobia?s=20)
+
+For more info check this [post](https://x.com/Monikaphobia/status/1844272129619132682?s=20)!
+
 # Have fun!
-I made this app because i think it's very usefull, i hope you think that too!
+This App was made for "Neurolings" but you can use it for other Shimeji's if you want!
+I hope you like this project!
