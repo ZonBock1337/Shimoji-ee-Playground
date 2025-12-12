@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-ee Playground Window.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\App.g.cs
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji_ee_Playground_Window.Properties.Resources.resources
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-ee Playground Window.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-ee Playground Window.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\bin\Debug\System.CodeDom.dll
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\bin\Debug\System.CodeDom.xml
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-.6175C01C.Up2Date
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\EditorWindow.baml
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\EditorWindow.g.cs
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\bin\Debug\Shimoji-ee Playground.exe.config
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\bin\Debug\Shimoji-ee Playground.exe
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\bin\Debug\Shimoji-ee Playground.pdb
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-ee Playground_MarkupCompile.cache
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-ee Playground.g.resources
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-ee Playground.exe
+C:\Users\user\source\repos\Shimoji-ee Playground Window\Shimoji-ee Playground Window\obj\Debug\Shimoji-ee Playground.pdb
