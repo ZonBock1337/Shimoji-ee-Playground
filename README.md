@@ -10,6 +10,13 @@ Shimoji Playground is an app that lets you make your Shimojis climb up a window 
 **BUT:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view).  
 
 ---
+
+# Requirements
+For **Shimoji Playground** you will need [Shimeji](https://kilkakon.com/shimeji/), you dont need it really but this App was made for [Shimeji](https://kilkakon.com/shimeji/).<br>
+Also you need **Java 11** for [Shimeji](https://kilkakon.com/shimeji/)
+
+---
+
 # Previews
 
 **Interface/UI**<br>
@@ -18,5 +25,5 @@ Shimoji Playground is an app that lets you make your Shimojis climb up a window 
 **Window throwing**<br>
 ![Shimoji Playground - Window throwing](https://github.com/user-attachments/assets/0e2583ac-fa2c-4476-96c0-60430ccdef9b)
 
-# Virus Check
-[Check on VirusTotal](https://www.virustotal.com/gui/file/c0f64a925a5faaff9364a1b8c8323886ebc50103186e27c429027a62282ffd89?nocache=1)
+# Have fun!
+I made this app because i think it's very usefull, i hope you think that too!
