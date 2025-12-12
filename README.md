@@ -16,4 +16,4 @@ Shimoji Playground is an app that lets you make your Shimojis climb up a window 
 ![Shimoji Playground UI](https://github.com/user-attachments/assets/9bc26324-e856-415d-8f17-c8ac195fb7d7)
 
 **Window throwing**<br>
-![Shimoji Playground - Window throwing](https://github.com/user-attachments/assets/7a7bbefa-c1be-47c0-a91a-9e144914ad7a)
+![Shimoji Playground - Window throwing](https://github.com/user-attachments/assets/0e2583ac-fa2c-4476-96c0-60430ccdef9b)
