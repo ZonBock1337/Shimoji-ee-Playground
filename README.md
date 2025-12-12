@@ -40,6 +40,9 @@ Shimoji-ee Playground will **not** support linux, the reason for this is because
 
 For more info check this [post](https://x.com/Monikaphobia/status/1844272129619132682?s=20)!
 
+If you have issues, please dm [me](https://x.com/CTLauncherBT) on [X/Twitter](https://x.com/CTLauncherBT)<br>
+[@ctlauncherbt](https://x.com/CTLauncherBT)
+
 # Have fun!
 This App was made for "Neurolings" but you can use it for other Shimeji's if you want!
 I hope you like this project!
