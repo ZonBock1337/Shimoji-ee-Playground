@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<EditorSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <WindowTitle>Shimeji Playground</WindowTitle>
-  <WindowWidth>960</WindowWidth>
-  <WindowHeight>540</WindowHeight>
-  <BackgroundPath>assets/background.png</BackgroundPath>
-  <StartDirectPlayground>false</StartDirectPlayground>
-</EditorSettings>
