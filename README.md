@@ -21,7 +21,7 @@ Also you need **Java 11** for [Shimeji](https://kilkakon.com/shimeji/)
 
 # Linux Support
 Shimoji-ee Playground will **not** support linux, the reason for this is because [Shimeji](https://kilkakon.com/shimeji/) doesn't support linux (simple reason)
-
+<br>
 ---
 
 # Previews
