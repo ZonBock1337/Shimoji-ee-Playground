@@ -9,7 +9,10 @@
 Shimoji Playground is an app that lets you make your Shimojis climb up a window (the standard Shimoji function).  
 **BUT:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view).  
 <br>
-Shishishi
+You also can use your own Playground (Image) for Shimoji Playground just go in the editor and change it!
+
+After the official first 1.0.0 release, i will make a Playground Builder (also in the app like the editor), i hope so.<br>
+The format will be (.spb)
 
 ---
 
