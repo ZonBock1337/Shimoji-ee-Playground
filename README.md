@@ -14,7 +14,7 @@ You also can use your own Playground (Image) for Shimoji Playground just go in t
 
 ---
 
-# Playgrounds Features
+# Playground Features
 
 With the release **1.0.6B** you now can select Playground not just a image, you can add a custom icon and overlays, it's just a folder, that means it is super easy!
 
