@@ -4,7 +4,7 @@
 ![GitHub license](https://img.shields.io/github/license/ZonBock1337/Shimoji-ee-Playground)
 
 <img width="1280" height="640" alt="Shimoji Playground (2)" src="https://github.com/user-attachments/assets/1252aa4c-6c65-4dbe-8538-3b5e60f8d2c2" />
-
+<br>
 **What is Shimoji Playground?**
 
 Shimoji Playground is an app that lets you make your Shimojis climb up a window (the standard Shimoji function).  
