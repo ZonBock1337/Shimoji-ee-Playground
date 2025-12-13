@@ -88,7 +88,7 @@ namespace ShimejiPlaygroundApp
 
         private void PlaygroundWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.S && (Keyboard.Modifiers & ModifierKeys.Shift) != 0)
+            if (e.Key == Key.X && (Keyboard.Modifiers & ModifierKeys.Control) != 0)
             {
                 returnToEditorAction?.Invoke();
                 this.Close();

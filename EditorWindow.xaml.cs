@@ -15,7 +15,7 @@ namespace ShimejiPlaygroundApp
         public string WindowTitle = "Shimeji Playground";
         public double WindowWidth = 960;
         public double WindowHeight = 540;
-        public string BackgroundPath = "assets/background.png";
+        public string BackgroundPath = "assets/playground.png";
         public bool StartDirectPlayground = false;
     }
 
@@ -56,15 +56,18 @@ namespace ShimejiPlaygroundApp
 
         private void SaveSettings()
         {
-            settings.WindowTitle = WindowTitleTextBox.Text;
-            settings.WindowWidth = double.TryParse(WidthTextBox.Text, out double w) ? w : 500;
-            settings.WindowHeight = double.TryParse(HeightTextBox.Text, out double h) ? h : 500;
-            settings.BackgroundPath = SelectedImageText.Text;
-            settings.StartDirectPlayground = StartDirectPlaygroundCheckBox.IsChecked ?? false;
+            if (MessageBox.Show("Save settings? (Can't be undo)", "Save Settings", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                settings.WindowTitle = WindowTitleTextBox.Text;
+                settings.WindowWidth = double.TryParse(WidthTextBox.Text, out double w) ? w : 500;
+                settings.WindowHeight = double.TryParse(HeightTextBox.Text, out double h) ? h : 500;
+                settings.BackgroundPath = SelectedImageText.Text;
+                settings.StartDirectPlayground = StartDirectPlaygroundCheckBox.IsChecked ?? false;
 
-            XmlSerializer serializer = new XmlSerializer(typeof(EditorSettings));
-            using (var stream = File.Create(settingsFile))
-                serializer.Serialize(stream, settings);
+                XmlSerializer serializer = new XmlSerializer(typeof(EditorSettings));
+                using (var stream = File.Create(settingsFile))
+                    serializer.Serialize(stream, settings);
+            }
         }
 
         private void ApplySettingsToUI()
@@ -103,7 +106,7 @@ namespace ShimejiPlaygroundApp
 
         private void LaunchPlayground()
         {
-            SaveSettings();
+            // SaveSettings();
             playground = new PlaygroundWindow(settings, () =>
             {
                 this.Show();
@@ -123,8 +126,17 @@ namespace ShimejiPlaygroundApp
 
         private void EditorWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.S && Keyboard.Modifiers.HasFlag(ModifierKeys.Shift))
+            if (e.Key == Key.X && Keyboard.Modifiers.HasFlag(ModifierKeys.Control))
                 ReturnFromPlayground();
+            else if (e.Key == Key.R && Keyboard.Modifiers.HasFlag(ModifierKeys.Control))
+                LaunchPlayground();
+            else if (e.Key == Key.S && Keyboard.Modifiers.HasFlag(ModifierKeys.Shift))
+                SaveSettings();
+        }
+
+        private void SaveSettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveSettings();
         }
     }
 

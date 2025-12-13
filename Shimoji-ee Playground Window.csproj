@@ -98,7 +98,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\background.png" />
+    <Resource Include="assets\playground.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon.ico" />
