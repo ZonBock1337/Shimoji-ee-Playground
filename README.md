@@ -12,9 +12,11 @@ Shimoji-ee Playground is an app that lets you make your Shimeji's climb up a win
 <br><br>
 You also can use your own Playground (Image) for Shimoji Playground just go in the editor and change it!
 
-After the official first 1.0.0 release, i will make a Playground Builder (also in the app like the editor), i hope so.<br>
-The format will be (.spb)
+---
 
+# Playgrounds feature
+With the release **1.0.6B** you now can select Playground not just a image, 
+![playground-selection](https://github.com/user-attachments/assets/59c25246-bd5d-43d7-b4eb-a8f89b7ad852)
 ---
 
 # Requirements
