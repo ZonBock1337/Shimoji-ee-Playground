@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<EditorSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WindowTitle>Shimoji Playground</WindowTitle>
+  <WindowWidth>960</WindowWidth>
+  <WindowHeight>540</WindowHeight>
+  <TopOverlayPath />
+  <BottomOverlayPath />
+  <LeftOverlayPath />
+  <RightOverlayPath />
+  <TopHeight>0</TopHeight>
+  <BottomHeight>0</BottomHeight>
+  <LeftWidth>0</LeftWidth>
+  <RightWidth>0</RightWidth>
+  <StartDirectPlayground>false</StartDirectPlayground>
+  <SelectedPlayground>Basic Playground</SelectedPlayground>
+  <MainWindowTopMost>false</MainWindowTopMost>
+  <BackgroundPath>playgrounds\Basic Playground\playground.png</BackgroundPath>
+</EditorSettings>
