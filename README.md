@@ -28,7 +28,6 @@ also the **settings.txt**
 `RightWidth=960`
 
 ![playground-selection](https://github.com/user-attachments/assets/59c25246-bd5d-43d7-b4eb-a8f89b7ad852)
-
 Have fun with the new update!
 
 ---
@@ -52,7 +51,6 @@ Shimoji-ee Playground will **not** support linux, the reason for this is because
 
 # Credits
 ✦ neuro by [@paccha_7](https://x.com/paccha_7?s=20)<br>
-✦ background by [@ctlauncherbt](https://x.com/CTLauncherBT)
 
 For more info or for download check this [post](https://x.com/Monikaphobia/status/1844272129619132682?s=20)!
 
