@@ -18,8 +18,9 @@ You also can use your own Playground (Image) for Shimoji Playground just go in t
 
 You now can select Playgrounds not just a image, you can add a custom icon and overlays, it's just a folder, that means it is super easy!
 
-Add a **preview.png** (This will be displayed as an image in the editor.)
 <img width="780" height="136" alt="image" src="https://github.com/user-attachments/assets/ed5b0eff-acca-4f39-abc8-7549c443107e" />
+
+Add a **preview.png** (This will be displayed as an image in the editor.)
 
 also the **settings.txt**
 
