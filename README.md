@@ -5,10 +5,10 @@
 
 <img width="1280" height="640" alt="Shimoji Playground" src="https://github.com/user-attachments/assets/a3edf784-bd3d-46c7-8367-5145ce5539cf" />
 
-**What is Shimoji-ee Playground?**
+# What is Shimoji-ee Playground?
 
-**Shimoji-ee Playground** was made for "Neurolings", Shimoji was created for a better experices with "Neurolings" (also Shimeji), with Shimoji you can create a Playground,<br>
-if they thow the Playground away, the Playground will come back (with a smooth animation).
+**Shimoji-ee Playground** was made for "Neurolings", Shimoji was created for a better experices with "Neurolings" (also Shimeji),<br>
+with Shimoji you can create a Playground, if they thow the Playground away, the Playground will come back (with a smooth animation) to the center.
 
 **MAINFUNCTION OF SHIMOJI:**<br>
 If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view). ([see here](https://github.com/ZonBock1337/Shimoji-ee-Playground/blob/master/README.md#previews))
