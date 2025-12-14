@@ -7,10 +7,9 @@
 
 **What is Shimoji-ee Playground?**
 
-Shimoji-ee Playground is an app that lets you make your Shimeji's climb up a window (the standard Shimeji function).  
-**BUT:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view). ([see here](https://github.com/ZonBock1337/Shimoji-ee-Playground/blob/master/README.md#previews))
+**MAINFUNCTION OF SHIMOJI:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view). ([see here](https://github.com/ZonBock1337/Shimoji-ee-Playground/blob/master/README.md#previews))
 <br><br>
-You also can use your own Playground (Image) for Shimoji Playground just go in the editor and change it!
+You also can use your own Playground (playground folder) for Shimoji Playground just go in the editor and change it!
 
 ---
 
@@ -21,15 +20,16 @@ You now can select Playgrounds not just a image, you can add a custom icon and o
 <img width="780" height="136" alt="image" src="https://github.com/user-attachments/assets/ed5b0eff-acca-4f39-abc8-7549c443107e" />
 
 Add a **preview.png** (This will be displayed as an image in the editor.)
+<img width="884" height="688" alt="image" src="https://github.com/user-attachments/assets/dc6678dd-99ba-428f-bc28-c530c1e05e05" />
 
 also the **settings.txt**
 
-`WindowHeight=540`<br>
-`WindowWidth=960`<br>
-`TopHeight=540`<br>
-`BottomHeight=540`<br>
-`LeftWidth=960`<br>
-`RightWidth=960`
+`WindowHeight=540` change the main window height size<br>
+`WindowWidth=960` change the main window width size<br>
+`TopHeight=540` change the top window height size<br>
+`BottomHeight=540` change the bottom window height size<br>
+`LeftWidth=960` change the left window width size<br>
+`RightWidth=960` change the right window width size
 
 ![playground-selection](https://github.com/user-attachments/assets/59c25246-bd5d-43d7-b4eb-a8f89b7ad852)
 
@@ -37,12 +37,24 @@ Please report bugs!^^
 
 ---
 
-# Requirements
-For **Shimoji-ee Playground** you will need [Shimeji](https://kilkakon.com/shimeji/), you dont need it really but this App was made for [Shimeji](https://kilkakon.com/shimeji/).<br>
-Also you need **Java 11** for [Shimeji](https://kilkakon.com/shimeji/)
+# Neurolings
+
+For **Shimoji-ee Playground** you will need [Neurolings](https://x.com/Monikaphobia/status/1844272129619132682?s=20), you dont need it really but this App was made for [it](https://x.com/Monikaphobia/status/1844272129619132682?s=20)<br>
+
+**Requirements**<br>
+You need **Java 11** for [Neurolings](https://x.com/Monikaphobia/status/1844272129619132682?s=20)
+
+---
+
+# Shimeji
+
+**Shimoji-ee Playground** works also fine with [Shimeji](https://kilkakon.com/shimeji/)<br>
+
+**Requirements**<br>
+For [Shimeji](https://kilkakon.com/shimeji/) you will need **Java 8**
 
 # Linux Support
-Shimoji-ee Playground will **not** support linux, the reason for this is because [Shimeji](https://kilkakon.com/shimeji/) doesn't support linux (simple reason)
+Shimoji-ee Playground will **not** support linux, the reason for this is because [Shimeji](https://kilkakon.com/shimeji/) doesn't support linux (also Neurolings)
 
 ---
 
