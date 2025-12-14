@@ -77,6 +77,17 @@ For more info or for download check this [post](https://x.com/Monikaphobia/statu
 If you have issues with that, please dm [me](https://x.com/CTLauncherBT) on [X/Twitter](https://x.com/)<br>
 Contact: [@ctlauncherbt](https://x.com/CTLauncherBT)
 
+# Open Source
+**Shimoji-ee Playground** is open source!
+If you fork this please **credit** me!
+
+Credit:
+https://x.com/CTLauncherBT
+
+In some places, I didn't write particularly good code,<br>
+there were days when I wasn't feeling well.<br>
+I will fix the errors in future updates.
+
 # Have fun!
 This App was made for "Neurolings" but you can use it for other Shimeji's if you want!
 I hope you like this project!
