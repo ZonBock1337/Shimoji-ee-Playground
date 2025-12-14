@@ -50,8 +50,8 @@ Shimoji-ee Playground will **not** support linux, the reason for this is because
 ![Shimoji Playground - Window throwing](https://github.com/user-attachments/assets/0e2583ac-fa2c-4476-96c0-60430ccdef9b)
 
 # Credits
-✦ neuro by [@paccha_7](https://x.com/paccha_7?s=20)<br>
-✦ vedal by moneka987
+✦ neuro & evil by [@paccha_7](https://x.com/paccha_7?s=20)<br>
+✦ vedal by [@monikaphobia](https://x.com/Monikaphobia)
 
 For more info or for download check this [post](https://x.com/Monikaphobia/status/1844272129619132682?s=20)!
 
