@@ -7,7 +7,10 @@
 
 **What is Shimoji-ee Playground?**
 
-**MAINFUNCTION OF SHIMOJI:** If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view). ([see here](https://github.com/ZonBock1337/Shimoji-ee-Playground/blob/master/README.md#previews))
+**
+
+**MAINFUNCTION OF SHIMOJI:**<br>
+If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view). ([see here](https://github.com/ZonBock1337/Shimoji-ee-Playground/blob/master/README.md#previews))
 <br><br>
 You also can use your own Playground (playground folder) for Shimoji Playground just go in the editor and change it!
 
@@ -43,8 +46,6 @@ For **Shimoji-ee Playground** you will need [Neurolings](https://x.com/Monikapho
 
 **Requirements**<br>
 You need **Java 11** for [Neurolings](https://x.com/Monikaphobia/status/1844272129619132682?s=20)
-
----
 
 # Shimeji
 
