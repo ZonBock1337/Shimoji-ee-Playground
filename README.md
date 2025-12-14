@@ -51,6 +51,7 @@ Shimoji-ee Playground will **not** support linux, the reason for this is because
 
 # Credits
 ✦ neuro by [@paccha_7](https://x.com/paccha_7?s=20)<br>
+✦ vedal by moneka987
 
 For more info or for download check this [post](https://x.com/Monikaphobia/status/1844272129619132682?s=20)!
 
