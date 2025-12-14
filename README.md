@@ -7,7 +7,7 @@
 
 # What is Shimoji-ee Playground?
 
-**Shimoji-ee Playground** was made for "Neurolings", Shimoji was created for a better experices with "Neurolings" (also Shimeji),<br>
+**Shimoji-ee Playground** was made for "Neurolings", Shimoji was created for a better experience with "Neurolings" (also Shimeji),<br>
 with Shimoji you can create a Playground, if they thow the Playground away, the Playground will come back (with a smooth animation) to the center.
 
 **MAINFUNCTION OF SHIMOJI:**<br>
