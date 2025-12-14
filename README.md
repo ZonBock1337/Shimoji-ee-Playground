@@ -7,7 +7,8 @@
 
 **What is Shimoji-ee Playground?**
 
-**
+**Shimoji-ee Playground** was made for "Neurolings", Shimoji was created for a better experices with "Neurolings" (also Shimeji), with Shimoji you can create a Playground,<br>
+if they thow the Playground away, the Playground will come back (with a smooth animation).
 
 **MAINFUNCTION OF SHIMOJI:**<br>
 If a cheeky Shimoji tries to throw the window away, it will be reset to the middle afterwards (provided it is no longer in the monitor's field of view). ([see here](https://github.com/ZonBock1337/Shimoji-ee-Playground/blob/master/README.md#previews))
