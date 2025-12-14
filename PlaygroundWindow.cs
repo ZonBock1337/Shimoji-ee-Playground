@@ -1,5 +1,4 @@
-﻿using Shimoji_ee_Playground_Window;
-using System;
+﻿using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;

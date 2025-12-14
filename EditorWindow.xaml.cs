@@ -21,14 +21,15 @@ namespace ShimojiPlaygroundApp
         public string BottomOverlayPath = "";
         public string LeftOverlayPath = "";
         public string RightOverlayPath = "";
-        public double TopHeight = 100;
-        public double BottomHeight = 100;
-        public double LeftWidth = 50;
-        public double RightWidth = 50;
+        public double TopHeight = 540;
+        public double BottomHeight = 540;
+        public double LeftWidth = 960;
+        public double RightWidth = 960;
         public bool StartDirectPlayground = false;
         public string SelectedPlayground = "Basic Playground";
         public bool MainWindowTopMost = false;
-        public string BackgroundPath = "";
+        public string BackgroundPath = "playgrounds/Basic Playground/playground.png";
+        public bool AcceptedPlaygroundLicense = false;
     }
 
     public class PlaygroundItem
@@ -41,7 +42,7 @@ namespace ShimojiPlaygroundApp
     public partial class EditorWindow : Window
     {
         private EditorSettings settings;
-        private string settingsFile = "editor_settings.xml";
+        private string settingsFile = "Shimoji-ee_Settings.xml";
         private ObservableCollection<PlaygroundItem> playgrounds = new ObservableCollection<PlaygroundItem>();
         private DispatcherTimer updateTimer;
 
@@ -54,6 +55,7 @@ namespace ShimojiPlaygroundApp
             ApplySettingsToUI();
             LoadPlaygrounds();
             checkSkipEditor();
+            checkLicenseAccepted();
 
             updateTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
             updateTimer.Tick += (s, e) => LoadPlaygrounds();
@@ -77,11 +79,11 @@ namespace ShimojiPlaygroundApp
 
         private void SaveSettings()
         {
-            if (MessageBox.Show("Save settings? (Can't be undo)", "Save Settings", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Save settings? (can't be undo)", "Save Settings", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 settings.WindowTitle = WindowTitleTextBox.Text;
-                settings.WindowWidth = double.TryParse(WidthTextBox.Text, out double w) ? w : 960;
-                settings.WindowHeight = double.TryParse(HeightTextBox.Text, out double h) ? h : 540;
+                settings.WindowWidth = double.TryParse(WidthTextBox.Text, out double ww) ? ww : 960;
+                settings.WindowHeight = double.TryParse(HeightTextBox.Text, out double wh) ? wh : 540;
                 settings.TopOverlayPath = TopOverlayText.Text;
                 settings.BottomOverlayPath = BottomOverlayText.Text;
                 settings.LeftOverlayPath = LeftOverlayText.Text;
@@ -95,10 +97,31 @@ namespace ShimojiPlaygroundApp
                 settings.BackgroundPath = BackgroundText.Text;
                 settings.MainWindowTopMost = TopMostMainWindowCheckbox.IsChecked ?? false;
 
-        XmlSerializer serializer = new XmlSerializer(typeof(EditorSettings));
-                using var stream = File.Create(settingsFile);
-                serializer.Serialize(stream, settings);
+                XmlSerializer serializer = new XmlSerializer(typeof(EditorSettings));
+                        using var stream = File.Create(settingsFile);
+                        serializer.Serialize(stream, settings);
             }
+        }
+
+        private void checkLicenseAccepted()
+        {
+            if (!settings.AcceptedPlaygroundLicense)
+            {
+                LicenseWindow license = new LicenseWindow();
+                license.ShowDialog();
+
+                if (!license.Accepted)
+                {
+                    Application.Current.Shutdown();
+                    return;
+                }
+
+                settings.AcceptedPlaygroundLicense = true;
+            }
+
+            XmlSerializer serializer = new XmlSerializer(typeof(EditorSettings));
+            using var stream = File.Create(settingsFile);
+            serializer.Serialize(stream, settings);
         }
 
         private void ApplySettingsToUI()
@@ -111,6 +134,7 @@ namespace ShimojiPlaygroundApp
             LeftWidthText.Text = settings.LeftWidth.ToString();
             RightWidthText.Text = settings.RightWidth.ToString();
             BackgroundText.Text = settings.BackgroundPath.ToString();
+            PlaygroundComboBox.SelectedItem = settings.SelectedPlayground.ToString();
             StartDirectPlaygroundCheckBox.IsChecked = settings.StartDirectPlayground;
             TopMostMainWindowCheckbox.IsChecked = settings.MainWindowTopMost;
         }
@@ -172,10 +196,11 @@ namespace ShimojiPlaygroundApp
             string folderPath = selected.Path;
 
             string mainImg = Path.Combine(folderPath, "playground.png");
+            string mainPreview = Path.Combine(folderPath, "preview.png");
             if (File.Exists(mainImg))
             {
                 BackgroundText.Text = mainImg;
-                PreviewImage.Source = LoadBitmap(mainImg);
+                PreviewImage.Source = LoadBitmap(mainPreview);
             }
             else
             {
@@ -193,7 +218,11 @@ namespace ShimojiPlaygroundApp
             {
                 foreach (var line in File.ReadAllLines(settingsTxt))
                 {
-                    if (line.StartsWith("TopHeight=") && double.TryParse(line.Substring(10), out double th))
+                    if (line.StartsWith("WindowHeight=") && double.TryParse(line.Substring(13), out double wh))
+                        HeightTextBox.Text = wh.ToString();
+                    else if (line.StartsWith("WindowWidth=") && double.TryParse(line.Substring(12), out double ww))
+                        WidthTextBox.Text = ww.ToString();
+                    else if (line.StartsWith("TopHeight=") && double.TryParse(line.Substring(10), out double th))
                         TopHeightText.Text = th.ToString();
                     else if (line.StartsWith("BottomHeight=") && double.TryParse(line.Substring(13), out double bh))
                         BottomHeightText.Text = bh.ToString();
@@ -203,13 +232,12 @@ namespace ShimojiPlaygroundApp
                         RightWidthText.Text = rw.ToString();
                 }
             }
-            if (!File.Exists(mainImg))
-                MessageBox.Show($"Playground not found:\n{mainImg}");
+            if (!File.Exists(mainPreview))
+                MessageBox.Show($"Playground not found:\n{mainPreview}");
         }
-
         private void ResetDefaults_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Reset settings? (Can't be undo)", "Reset Settings", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            if (MessageBox.Show("Reset settings? (can't be undo)", "Reset Settings", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 settings = new EditorSettings();
                 ApplySettingsToUI();
@@ -237,7 +265,6 @@ namespace ShimojiPlaygroundApp
         }
 
         private void SaveSettingsButton_Click(object sender, RoutedEventArgs e) => SaveSettings();
-
         private void checkSkipEditor()
         {
             if (settings.StartDirectPlayground)
@@ -262,9 +289,7 @@ namespace ShimojiPlaygroundApp
         {
             LaunchPlayground();
         }
-
         private void ReturnFromPlayground() => this.Show();
-
         private void EditorWindow_KeyDown(object sender, KeyEventArgs e)
         {
             if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control) && e.Key == Key.X)
