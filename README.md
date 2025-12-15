@@ -53,7 +53,7 @@ For [Shimeji](https://kilkakon.com/shimeji/) you will need **Java 8**
 
 <img width="6912" height="3456" alt="Linux Support" src="https://github.com/user-attachments/assets/eb697e76-b5fb-4fc9-928b-4e3036d457ca" />
 
-After the official release (**1.0.0**)<br>
+After the official release (**1.1.0**)<br>
 **Shimoji-ee Playground** will have a
 Linux version
 
