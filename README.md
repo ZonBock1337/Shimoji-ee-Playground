@@ -56,7 +56,10 @@ You need **Java 11** for [Neurolings](https://x.com/Monikaphobia/status/18442721
 For [Shimeji](https://kilkakon.com/shimeji/) you will need **Java 8**
 
 # Linux Support
-Shimoji-ee Playground will **not** support linux, the reason for this is because [Shimeji](https://kilkakon.com/shimeji/) doesn't support linux (also Neurolings)
+
+After the official release (**1.0.0**)<br>
+**Shimoji-ee Playground** will have a
+Linux version
 
 ---
 
