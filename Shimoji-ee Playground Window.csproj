@@ -80,7 +80,8 @@
     <Compile Include="LicenseWindow.xaml.cs">
       <DependentUpon>LicenseWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PlaygroundWindow.cs" />
+    <Compile Include="shimoji-cs\Logger.cs" />
+    <Compile Include="shimoji-cs\PlaygroundWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -8,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 using System.Windows.Threading;
+using System.Linq.Expressions;
 
 namespace ShimojiPlaygroundApp
 {
@@ -48,7 +49,9 @@ namespace ShimojiPlaygroundApp
 
         public EditorWindow()
         {
+
             InitializeComponent();
+            Logger.Info($"Started {Title}");
             PlaygroundComboBox.ItemsSource = playgrounds;
 
             LoadSettings();
@@ -97,6 +100,9 @@ namespace ShimojiPlaygroundApp
                 settings.BackgroundPath = BackgroundText.Text;
                 settings.MainWindowTopMost = TopMostMainWindowCheckbox.IsChecked ?? false;
 
+                Logger.Info("Saved settings:");
+                Logger.Info(settingsFile);
+
                 XmlSerializer serializer = new XmlSerializer(typeof(EditorSettings));
                         using var stream = File.Create(settingsFile);
                         serializer.Serialize(stream, settings);
@@ -107,7 +113,7 @@ namespace ShimojiPlaygroundApp
         {
             if (!settings.AcceptedPlaygroundLicense)
             {
-                LicenseWindow license = new LicenseWindow();
+                LicenseWindow license = new LicenseWindow(settings);
                 license.ShowDialog();
 
                 if (!license.Accepted)
@@ -126,6 +132,8 @@ namespace ShimojiPlaygroundApp
 
         private void ApplySettingsToUI()
         {
+            Logger.Info("Applied Settings to UI");
+
             WindowTitleTextBox.Text = settings.WindowTitle;
             WidthTextBox.Text = settings.WindowWidth.ToString();
             HeightTextBox.Text = settings.WindowHeight.ToString();
@@ -133,8 +141,14 @@ namespace ShimojiPlaygroundApp
             BottomHeightText.Text = settings.BottomHeight.ToString();
             LeftWidthText.Text = settings.LeftWidth.ToString();
             RightWidthText.Text = settings.RightWidth.ToString();
-            BackgroundText.Text = settings.BackgroundPath.ToString();
-            PlaygroundComboBox.SelectedItem = settings.SelectedPlayground.ToString();
+            BackgroundText.Text = settings.BackgroundPath;
+
+            var playground = playgrounds
+                .FirstOrDefault(p => p.Name == settings.SelectedPlayground);
+
+            if (playground != null)
+                PlaygroundComboBox.SelectedItem = playground;
+
             StartDirectPlaygroundCheckBox.IsChecked = settings.StartDirectPlayground;
             TopMostMainWindowCheckbox.IsChecked = settings.MainWindowTopMost;
         }
@@ -195,6 +209,8 @@ namespace ShimojiPlaygroundApp
 
             string folderPath = selected.Path;
 
+            string playgroundName = selected.Name;
+
             string mainImg = Path.Combine(folderPath, "playground.png");
             string mainPreview = Path.Combine(folderPath, "preview.png");
             if (File.Exists(mainImg))
@@ -216,29 +232,57 @@ namespace ShimojiPlaygroundApp
             string settingsTxt = Path.Combine(folderPath, "settings.txt");
             if (File.Exists(settingsTxt))
             {
+                Logger.Info($"Loading settings for {playgroundName}");
                 foreach (var line in File.ReadAllLines(settingsTxt))
                 {
                     if (line.StartsWith("WindowHeight=") && double.TryParse(line.Substring(13), out double wh))
+                    {
                         HeightTextBox.Text = wh.ToString();
+                        Logger.Info($"Loaded setting 'WindowHeight' for Window Height (with the value: {HeightTextBox.Text}");
+                    }
                     else if (line.StartsWith("WindowWidth=") && double.TryParse(line.Substring(12), out double ww))
+                    {
                         WidthTextBox.Text = ww.ToString();
+                        Logger.Info($"Loaded setting 'WindowWidth' for Window Width (with the value: {WidthTextBox.Text}");
+                    }
                     else if (line.StartsWith("TopHeight=") && double.TryParse(line.Substring(10), out double th))
+                    {
                         TopHeightText.Text = th.ToString();
+                        Logger.Info($"Loaded setting 'TopHeight' for Top Widnow Height (with the value: {TopHeightText.Text}");
+                    }
                     else if (line.StartsWith("BottomHeight=") && double.TryParse(line.Substring(13), out double bh))
+                    {
                         BottomHeightText.Text = bh.ToString();
+                        Logger.Info($"Loaded setting 'BottomHeight' for Bottom Widnow Height (with the value: {BottomHeightText.Text}");
+                    }
                     else if (line.StartsWith("LeftWidth=") && double.TryParse(line.Substring(10), out double lw))
+                    {
                         LeftWidthText.Text = lw.ToString();
+                        Logger.Info($"Loaded setting 'LeftWidth' for Left Widnow Width (with the value: {LeftWidthText.Text}");
+                    }
                     else if (line.StartsWith("RightWidth=") && double.TryParse(line.Substring(11), out double rw))
+                    {
                         RightWidthText.Text = rw.ToString();
+                        Logger.Info($"Loaded setting 'RightWidth' for Right Widnow Width (with the value: {RightWidthText.Text}");
+                    } 
                 }
             }
             if (!File.Exists(mainPreview))
-                MessageBox.Show($"Playground not found:\n{mainPreview}");
+            {
+                Logger.Warn($"Preview image not found using: {mainImg}");
+                PreviewImage.Source = LoadBitmap(mainImg);
+            }
+            else if (!File.Exists(mainImg))
+            {
+                Logger.Error($"Playground cannot load the main image");
+                MessageBox.Show("Playground not found");
+            }
         }
         private void ResetDefaults_Click(object sender, RoutedEventArgs e)
         {
             if (MessageBox.Show("Reset settings? (can't be undo)", "Reset Settings", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
+                Logger.Info("Reseting settings...");
                 settings = new EditorSettings();
                 ApplySettingsToUI();
             }
@@ -259,6 +303,7 @@ namespace ShimojiPlaygroundApp
 
         private void LaunchPlayground()
         {
+            Logger.Info($"Launched the playground: {settings.SelectedPlayground}");
             PlaygroundWindow pg = new PlaygroundWindow(settings, ReturnFromPlayground);
             pg.Show();
             this.Hide();
@@ -269,6 +314,8 @@ namespace ShimojiPlaygroundApp
         {
             if (settings.StartDirectPlayground)
             {
+                Logger.Info("Skipped Editor:");
+                Logger.Info($"Start Playground direct after Application launch: {settings.StartDirectPlayground}");
                 LaunchPlayground();
             }
         }
@@ -307,6 +354,7 @@ namespace ShimojiPlaygroundApp
 
         protected override void OnClosed(EventArgs e)
         {
+            Logger.Info("Shutting down...");
             base.OnClosed(e);
             Application.Current.Shutdown();
         }
