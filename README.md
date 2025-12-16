@@ -5,6 +5,8 @@
 
 <img width="1280" height="640" alt="Shimoji Playground" src="https://github.com/user-attachments/assets/a3edf784-bd3d-46c7-8367-5145ce5539cf" />
 
+---
+
 <img width="6912" height="3456" alt="What is Shimoji-ee Playground" src="https://github.com/user-attachments/assets/9d01dfca-38ae-4c16-acbc-c4f131168838" />
 
 **Shimoji-ee Playground** was made for "Neurolings", Shimoji was created for a better experience with "Neurolings" (also Shimeji),<br>
