@@ -19,6 +19,7 @@ namespace ShimojiPlaygroundApp
         private void Agree_Click(object sender, RoutedEventArgs e)
         {
             Logger.Info($"License accepted: {settings.AcceptedPlaygroundLicense}");
+            Logger.Info("Loading EditorWindow...");
             Accepted = true;
             Close();
         }
@@ -26,6 +27,7 @@ namespace ShimojiPlaygroundApp
         private void Disagree_Click(object sender, RoutedEventArgs e)
         {
             Logger.Warn($"License not accepted: {settings.AcceptedPlaygroundLicense}");
+            Logger.Info("Shutting down application");
             Accepted = false;
             Close();
         }

@@ -27,7 +27,7 @@ namespace ShimojiPlaygroundApp
         public double LeftWidth = 960;
         public double RightWidth = 960;
         public bool StartDirectPlayground = false;
-        public string SelectedPlayground = "Basic Playground";
+        public string SelectedPlayground = "Scrubland Playground";
         public bool MainWindowTopMost = false;
         public string BackgroundPath = "playgrounds/Basic Playground/playground.png";
         public bool AcceptedPlaygroundLicense = false;

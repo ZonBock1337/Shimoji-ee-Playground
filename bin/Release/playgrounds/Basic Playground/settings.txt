@@ -1,0 +1,6 @@
+WindowWidth=960
+WindowHeight=540
+TopHeight=0
+BottomHeight=0
+LeftWidth=0
+RightWidth=0

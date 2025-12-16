@@ -17,16 +17,16 @@ namespace Shimoji_ee_Playground_Window
 
             this.DispatcherUnhandledException += (s, ex) =>
             {
-                Logger.Crash("Application error", ex.Exception);
-
+                Logger.Crash("Application crash", ex.Exception);
                 MessageBox.Show(
-                    "Application error.\nPlease view logs.",
-                    "Error",
+                    "Application crashed unexpectedly.\n\nPlease view logs:\nAppData/Shimoji-ee/Playground",
+                    "App crashed",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error
                 );
 
                 ex.Handled = true;
+                this.Shutdown();
             };
         }
     }
