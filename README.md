@@ -70,7 +70,7 @@ Linux version
 <img width="6912" height="3456" alt="Credits" src="https://github.com/user-attachments/assets/b9026a11-2f6f-47ca-a20a-0e2102f41455" />
 
 ✦ neuro & evil by [@paccha_7](https://x.com/paccha_7?s=20)<br>
-✦ vedal by [@monikaphobia](https://x.com/Monikaphobia)
+✦ vedal by [@monikaphobia](https://x.com/Monikaphobia)<br>
 ✦ Scrubland Playground by [[@sank](https://x.com/SangArt1017839)]
 
 For more info or for download check this [post](https://x.com/Monikaphobia/status/1844272129619132682?s=20)!
@@ -81,7 +81,7 @@ Contact: [@ctlauncherbt](https://x.com/CTLauncherBT)
 <img width="6912" height="3456" alt="Special Thanks to" src="https://github.com/user-attachments/assets/0154ccbc-b84c-46f4-b62d-e3c1b3da181d" />
 
 monikaphobia and paccha_7 for allowing us to use your Shimeji images!
-
+<br>
 and to Sankyu! thank you for the amazing playground!
 
 # Open Source
