@@ -18,7 +18,7 @@ namespace ShimojiPlaygroundApp
         private DateTime lastCheckTime;
         private Action returnToEditorAction;
         public bool isReturningToEditor = false;
-
+        
         internal static class Win32
         {
             public const int GWL_EXSTYLE = -20;

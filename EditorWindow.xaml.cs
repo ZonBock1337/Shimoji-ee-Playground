@@ -15,21 +15,21 @@ namespace ShimojiPlaygroundApp
     [Serializable]
     public class EditorSettings
     {
-        public string WindowTitle = "Shimoji Playground";
+        public string WindowTitle = "Shimoji-ee Playground";
         public double WindowWidth = 960;
         public double WindowHeight = 540;
-        public string TopOverlayPath = "";
+        public string TopOverlayPath = "playgrounds/Scrubland Playground/top.png";
         public string BottomOverlayPath = "";
         public string LeftOverlayPath = "";
         public string RightOverlayPath = "";
-        public double TopHeight = 540;
-        public double BottomHeight = 540;
-        public double LeftWidth = 960;
-        public double RightWidth = 960;
+        public double TopHeight = 156;
+        public double BottomHeight = 0;
+        public double LeftWidth = 0;
+        public double RightWidth = 0;
         public bool StartDirectPlayground = false;
         public string SelectedPlayground = "Scrubland Playground";
         public bool MainWindowTopMost = false;
-        public string BackgroundPath = "playgrounds/Basic Playground/playground.png";
+        public string BackgroundPath = "playgrounds/Scrubland Playground/playground.png";
         public bool AcceptedPlaygroundLicense = false;
     }
 
@@ -235,47 +235,113 @@ namespace ShimojiPlaygroundApp
                 Logger.Info($"Loading settings for {playgroundName}");
                 foreach (var line in File.ReadAllLines(settingsTxt))
                 {
+
+                    // Window settings
+
                     if (line.StartsWith("WindowHeight=") && double.TryParse(line.Substring(13), out double wh))
                     {
                         HeightTextBox.Text = wh.ToString();
-                        Logger.Info($"Loaded setting 'WindowHeight' for Window Height (with the value: {HeightTextBox.Text}");
+                        Logger.Info($"Loaded setting 'WindowHeight' for Window Height (with the value: {wh})");
                     }
                     else if (line.StartsWith("WindowWidth=") && double.TryParse(line.Substring(12), out double ww))
                     {
                         WidthTextBox.Text = ww.ToString();
-                        Logger.Info($"Loaded setting 'WindowWidth' for Window Width (with the value: {WidthTextBox.Text}");
+                        Logger.Info($"Loaded setting 'WindowWidth' for Window Width (with the value: {ww})");
                     }
+
+                    // Overlay settings
+
                     else if (line.StartsWith("TopHeight=") && double.TryParse(line.Substring(10), out double th))
                     {
                         TopHeightText.Text = th.ToString();
-                        Logger.Info($"Loaded setting 'TopHeight' for Top Widnow Height (with the value: {TopHeightText.Text}");
+                        Logger.Info($"Loaded setting 'TopHeight' for Top Widnow Height (with the value: {th})");
                     }
                     else if (line.StartsWith("BottomHeight=") && double.TryParse(line.Substring(13), out double bh))
                     {
                         BottomHeightText.Text = bh.ToString();
-                        Logger.Info($"Loaded setting 'BottomHeight' for Bottom Widnow Height (with the value: {BottomHeightText.Text}");
+                        Logger.Info($"Loaded setting 'BottomHeight' for Bottom Widnow Height (with the value: {bh})");
                     }
                     else if (line.StartsWith("LeftWidth=") && double.TryParse(line.Substring(10), out double lw))
                     {
                         LeftWidthText.Text = lw.ToString();
-                        Logger.Info($"Loaded setting 'LeftWidth' for Left Widnow Width (with the value: {LeftWidthText.Text}");
+                        Logger.Info($"Loaded setting 'LeftWidth' for Left Widnow Width (with the value: {lw})");
                     }
                     else if (line.StartsWith("RightWidth=") && double.TryParse(line.Substring(11), out double rw))
                     {
                         RightWidthText.Text = rw.ToString();
-                        Logger.Info($"Loaded setting 'RightWidth' for Right Widnow Width (with the value: {RightWidthText.Text}");
-                    } 
+                        Logger.Info($"Loaded setting 'RightWidth' for Right Widnow Width (with the value: {rw})");
+                    }
+
+                    // Playground settings
+
+                    else if (line.StartsWith("TopMost=") && bool.TryParse(line.Substring(8), out bool tm))
+                    {
+                        TopMostMainWindowCheckbox.IsChecked = tm;
+                        Logger.Info($"Loaded setting 'TopMost' for Main Window (with the value: {tm})");
+                    }
+
+                    // Custom Path
+
+                    else if (line.StartsWith("PreviewPath="))
+                    {
+                        string relativePath = line.Substring("PreviewPath=".Length);
+                        mainPreview = Path.Combine(folderPath, relativePath);
+
+                        Logger.Info($"Loaded setting 'PreviewPath' for Main Window (with the value: {mainPreview})");
+                    }
+                    else if (line.StartsWith("PlaygroundPath="))
+                    {
+                        string relativePath = line.Substring("PlaygroundPath=".Length);
+                        BackgroundText.Text = Path.Combine(folderPath, relativePath);
+                        mainImg = BackgroundText.Text;
+
+                        Logger.Info($"Loaded setting 'PlaygroundPath' for Main Window (with the value: {BackgroundText.Text})");
+                    }
+                    else if (line.StartsWith("TopOverlayPath="))
+                    {
+                        string relativePath = line.Substring("TopOverlayPath=".Length);
+                        TopOverlayText.Text = Path.Combine(folderPath, relativePath);
+
+                        Logger.Info($"Loaded setting 'TopOverlayPath' for Main Window (with the value: {TopOverlayText.Text})");
+                    }
+                    else if (line.StartsWith("BottomOverlayPath="))
+                    {
+                        string relativePath = line.Substring("BottomOverlayPath=".Length);
+                        BottomOverlayText.Text = Path.Combine(folderPath, relativePath);
+
+                        Logger.Info($"Loaded setting 'BottomOverlayPath' for Main Window (with the value: {BottomOverlayText.Text})");
+                    }
+                    else if (line.StartsWith("LeftOverlayPath="))
+                    {
+                        string relativePath = line.Substring("LeftOverlayPath=".Length);
+                        LeftOverlayText.Text = Path.Combine(folderPath, relativePath);
+
+                        Logger.Info($"Loaded setting 'LeftOverlayPath' for Main Window (with the value: {LeftOverlayText.Text})");
+                    }
+                    else if (line.StartsWith("RightOverlayPath="))
+                    {
+                        string relativePath = line.Substring("RightOverlayPath=".Length);
+                        RightOverlayText.Text = Path.Combine(folderPath, relativePath);
+
+                        Logger.Info($"Loaded setting 'RightOverlayPath' for Main Window (with the value: {RightOverlayText.Text})");
+                    }
                 }
             }
-            if (!File.Exists(mainPreview))
+            if (File.Exists(mainImg))
             {
-                Logger.Warn($"Preview image not found using: {mainImg}");
-                PreviewImage.Source = LoadBitmap(mainImg);
+                if (File.Exists(mainPreview))
+                    PreviewImage.Source = LoadBitmap(mainPreview);
+                else
+                {
+                    Logger.Warn($"Preview image not found, using main image: {mainImg}");
+                    PreviewImage.Source = LoadBitmap(mainImg);
+                }
             }
-            else if (!File.Exists(mainImg))
+            else
             {
-                Logger.Error($"Playground cannot load the main image");
+                Logger.Error("Playground cannot load the main image");
                 MessageBox.Show("Playground not found");
+                PreviewImage.Source = null;
             }
         }
         private void ResetDefaults_Click(object sender, RoutedEventArgs e)
@@ -330,21 +396,35 @@ namespace ShimojiPlaygroundApp
             {
                 settings.MainWindowTopMost = false;
             }
+            // idk it works?
         }
 
         private void RunButton_Click(object sender, RoutedEventArgs e)
         {
             LaunchPlayground();
         }
-        private void ReturnFromPlayground() => this.Show();
+        private void ReturnFromPlayground()
+        {
+            Logger.Info("Shortcut + X triggered");
+            Logger.Info("Returned to Editor");
+            this.Show();
+        }
         private void EditorWindow_KeyDown(object sender, KeyEventArgs e)
         {
             if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control) && e.Key == Key.X)
+            {
                 ReturnFromPlayground();
+            }
             else if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control) && e.Key == Key.R)
+            {
+                Logger.Info("Shortcut + R triggered");
                 RunButton_Click(null, null);
+            }
             else if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control) && e.Key == Key.S)
+            {
+                Logger.Info("Shortcut + S triggered");
                 SaveSettings();
+            }
         }
 
         private void TopMostMainWindowCheckbox_Checked(object sender, RoutedEventArgs e)

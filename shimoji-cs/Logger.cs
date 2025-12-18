@@ -18,7 +18,7 @@ namespace ShimojiPlaygroundApp
 
         private static readonly string LogDirectory =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                         "Shimoji-ee", "Playground");
+                "Shimoji-ee", "Playground");
 
         private static readonly string LogFile;
 
