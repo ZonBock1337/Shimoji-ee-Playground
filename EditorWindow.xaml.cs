@@ -28,8 +28,8 @@ namespace ShimojiPlaygroundApp
         public double RightWidth = 0;
         public bool StartDirectPlayground = false;
         public string SelectedPlayground = "Scrubland Playground";
-        public bool MainWindowTopMost = false;
-        public string BackgroundPath = "playgrounds/Scrubland Playground/playground.png";
+        public bool MainWindowTopMost = true;
+        public string BackgroundPath = "playgrounds/Scrubland Playground/assets/main/playground.png";
         public bool AcceptedPlaygroundLicense = false;
     }
 
@@ -55,10 +55,10 @@ namespace ShimojiPlaygroundApp
             PlaygroundComboBox.ItemsSource = playgrounds;
 
             LoadSettings();
-            ApplySettingsToUI();
             LoadPlaygrounds();
             checkSkipEditor();
             checkLicenseAccepted();
+            ApplySettingsToUI();
 
             updateTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
             updateTimer.Tick += (s, e) => LoadPlaygrounds();
@@ -350,6 +350,7 @@ namespace ShimojiPlaygroundApp
             {
                 Logger.Info("Reseting settings...");
                 settings = new EditorSettings();
+                Logger.Info("Settings now standard");
                 ApplySettingsToUI();
             }
         }
@@ -386,19 +387,6 @@ namespace ShimojiPlaygroundApp
             }
         }
 
-        private void checkTopMost()
-        {
-            if (settings.MainWindowTopMost)
-            {
-                settings.MainWindowTopMost = true;
-            }
-            else
-            {
-                settings.MainWindowTopMost = false;
-            }
-            // idk it works?
-        }
-
         private void RunButton_Click(object sender, RoutedEventArgs e)
         {
             LaunchPlayground();
@@ -425,11 +413,6 @@ namespace ShimojiPlaygroundApp
                 Logger.Info("Shortcut + S triggered");
                 SaveSettings();
             }
-        }
-
-        private void TopMostMainWindowCheckbox_Checked(object sender, RoutedEventArgs e)
-        {
-            checkTopMost();
         }
 
         protected override void OnClosed(EventArgs e)
