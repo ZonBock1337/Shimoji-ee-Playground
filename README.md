@@ -12,6 +12,9 @@ We moved to this new repo [[Click here]](https://github.com/CTLauncherBT/Shimoji
 
 <img width="6912" height="3456" alt="What is Shimoji-ee Playground" src="https://github.com/user-attachments/assets/9d01dfca-38ae-4c16-acbc-c4f131168838" />
 
+# Warning!
+We moved to this new repo [[Click here]](https://github.com/CTLauncherBT/Shimoji-ee-Playground/)
+
 **Shimoji-ee Playground** was made for "Neurolings", Shimoji was created for a better experience with "Neurolings" (also Shimeji),<br>
 with Shimoji you can create a Playground, if they thow the Playground away, the Playground will come back (with a smooth animation) to the center.
 
